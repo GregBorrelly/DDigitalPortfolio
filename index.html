@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,14 +8,229 @@
     <title>Document</title>
     <link rel="stylesheet" href="main.css">
 
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Inknut+Antiqua" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+    <link rel="stylesheet" href="bower_components/slick-carousel/slick/slick.css">
+    <link rel="stylesheet" href="bower_components/slick-carousel/slick/slick-theme.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+
+
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular-route.min.js"></script>
+
 
     <script src="main.js"></script>
     <script src="app-module.js"></script>
     <script src="app-routes.js"></script>
+
+
+
+    <script type="text/javascript" src="bower_components/slick-carousel/slick/slick.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+
+
+            $(".button-collapse").sideNav({
+                edge: "right"
+            });
+
+        });
+
+
+        $(document).ready(function () {
+
+            $('.showcase').slick({
+                slidesToShow: 2,
+                slidesToScroll: 2,
+                dots: true,
+                mobileFirst: true,
+                responsive: [{
+                    breakpoint: 580,
+                    settings: {
+                        arrows: false,
+                        centerMode: true,
+                        centerPadding: '40px',
+                        slidesToShow: 2,
+                        slidesToScroll: 2,
+                        mobileFirst: true,
+                    }
+                }]
+
+
+            });
+
+        });
+    </script>
+
+    <style>
+        body {
+            font-family: 'Inknut Antiqua', serif;
+            background-color: white;
+        }
+
+        .page-footer {
+            background-color: white;
+            color: #3c5275 !important;
+            border-top: 1px solid #ccc;
+        }
+
+
+
+        img {
+            width: 100%;
+            height: 85vh;
+            border: solid 1px #ccc;
+        }
+
+       .menu-icons{
+            font-size: 20px;
+        }
+
+        .menu-icons a:hover{
+
+        }
+
+        i {
+            color: #3c5275!important;
+            font-size: 40px !important;
+            font-family: 'Inknut Antiqua', serif;
+        }
+        /*.wrapper{
+            height: 200px;
+
+        }*/
+
+        #nav-title {
+            font-weight: 500;
+            color: #3c5275;
+            font-size: 26px;
+        }
+
+        .side-nav {
+            padding-top: 10vh;
+            font-weight: 700;
+        }
+
+        .side-nav li>a {
+
+            font-size: 28px;
+            color: #3c5275;
+        }
+
+     li  a:hover{
+            background: white !important;
+            width: inherit !important;
+            height: inherit !important;
+            margin-bottom: 0px !important;
+            padding-bottom: 0px !important; 
+        }
+        #twitter > a:hover > i{
+
+          color: #1DA1F2 !important;
+
+
+        }
+        .brand-logo {
+            margin-left: 1vw;
+        }
+
+
+        .mycontainer {
+            border-top: black 1px solid;
+        }
+
+        @media(width:600px) {
+
+            i {
+                color: #3c5275 !important;
+                font-size: 40px !important;
+                font-family: 'Inknut Antiqua', serif;
+            }
+
+
+            .brand-logo {
+                margin-left: 0px;
+                font-size: 11px !important;
+            }
+        }
+    </style>
+
 </head>
-<body>
-    
+
+
+
+<body ng-app="ddPhotography">
+
+    <nav>
+        <div class="nav-wrapper white">
+            <a href="#!" class="brand-logo" id="nav-title"><i class="fa fa-camera-retro" aria-hidden="true"></i>Dee Dee Visuals</a>
+            <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+            <ul class="menu-icons right hide-on-med-and-down">
+
+
+
+                <li id="pictures"><a href="sass.html"><i class="fa fa-picture-o" aria-hidden="true"></i></a></li>
+                 <li>
+                    <a href="mobile.html"> <i class="fa fa-instagram" aria-hidden="true"></i></a>
+                </li>
+                <li id="twitter"><a href="badges.html"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                <li>
+                    <a href="collapsible.html"> <i class="fa fa-facebook" aria-hidden="true"></i></a>
+                </li>
+               
+            </ul>
+            <ul class="side-nav" id="mobile-demo">
+                <li><a href="sass.html">Sass</a></li>
+                <li><a href="badges.html">Components</a></li>
+                <li><a href="collapsible.html">Javascript</a></li>
+                <li><a href="mobile.html">Mobile</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <div class="transparent">
+
+
+        <div class="mycontainer">
+
+
+            <div class="row">
+                <div class="col s12">
+                    <div class="showcase">
+                        <div ng-repeat="number in [1,2,3,4,5,6,7,8,9]">
+                            <img ng-src="img/img{{number}}.JPG" alt="">
+
+
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </div>
+
+
+
+
+        </div>
+
+
+    </div>
+
+
+
 </body>
+
 </html>

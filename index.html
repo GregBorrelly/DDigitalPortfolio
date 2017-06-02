@@ -27,12 +27,13 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular-route.min.js"></script>
+    <script src="bower_components/typed.js/dist/typed.min.js"></script>
 
-     <script src="app-module.js"></script>
+    <script src="app-module.js"></script>
     <script src="app-routes.js"></script>
 
     <script src="main.js"></script>
-   
+
 
     <script type="text/javascript" src="bower_components/slick-carousel/slick/slick.min.js"></script>
 
@@ -61,7 +62,7 @@
 
             </ul>
             <ul class="side-nav" id="mobile-demo">
-               
+
                 <li id="pictures"><a href="sass.html"><i class="fa fa-picture-o" aria-hidden="true"></i>Photos</a></li>
                 <li id="instagram">
                     <a href="https://www.instagram.com/dd_visuals/" target="_blank"> <i class="fa fa-instagram" aria-hidden="true"></i> Instagram</a>
@@ -75,13 +76,94 @@
     </nav>
 
 
-    <div class="transparent">
+    <div>
 
 
-        <div class="mycontainer" ng-controller="mainController">
-         
+        <div class="" ng-controller="mainController">
 
-            <div class="row">
+
+            <video autoplay loop poster="polina.jpg" id="bgvid">
+
+                <source src="img/main.mp4" type="video/mp4">
+            </video>
+
+            <div style="background-color:rgba(0,0,0,0.26); ">
+
+                <div class="row">
+                    <div class="col s7" style="height:100vh; color:white; font-size:35px;padding:14vw; margin-top:2vh;">
+
+                        <script>
+                            document.addEventListener("DOMContentLoaded", function () {
+                                Typed.new(".element", {
+                                    strings: ["Photographer", "Filmmaker", "Artist", "Animal Lover", "Enviromentalist"],
+                                    typeSpeed: -1
+                                });
+                            });
+                        </script>
+                      
+                        My Name is Dee Dee and I'm a 
+                        <span class="element"></span>
+
+
+
+                    </div>
+                    <div class="col s4" style="height:100vh">
+                        <h1 style="color:white">Who Am I ?</h1>
+                        <img id="profileImg" src="img/profile.jpg" alt="">
+
+
+                    </div>
+
+
+
+                </div>
+
+                    <div class="row">
+                    <div class="col s6 offset-s5" >
+
+
+                        <h2 style="color:white">My Work</h2>
+
+
+
+                    </div>
+
+
+
+                </div>
+                <div class="row">
+                    <div class="col s4" ng-repeat="number in imageArray">
+
+
+                        <img class="materialboxed" width="650" ng-src="img/img{{number}}.JPG" alt="">
+
+
+
+                    </div>
+
+
+
+                </div>
+
+            </div>
+            <!--<div class="section  grey lighten-2" style="height:20vh;">
+                <div class="row container">
+
+                </div>
+            </div>
+            <div class="parallax-container">
+
+                <div class="parallax"><img src="img/img4.JPG"></div>
+            </div>
+            <div class="section  grey lighten-2" style="height:100vh;">
+                <div class="row container">
+
+                </div>
+            </div>
+
+-->
+
+            <!--<div class="row">
                 <div class="col s12">
                     <div class="showcase">
                         <div ng-repeat="number in shuffle(imageArray)">
@@ -94,7 +176,7 @@
                 </div>
 
 
-            </div>
+            </div>-->
 
 
 

@@ -23,54 +23,17 @@ angular.module('ddPhotography')
         };
 
 
-    });
+        $(document).ready(function () {
 
+            console.log("This ran")
+            $(".button-collapse").sideNav({
+                edge: "right"
+            });
+            $(document).ready(function () {
+                $('.materialboxed').materialbox();
+            });
 
-$(document).ready(function () {
-
-
-    $(".button-collapse").sideNav({
-        edge: "right"
-    });
-
-});
-
-
-$(document).ready(function () {
-
-    $('.showcase').slick({
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        dots: true,
-        mobileFirst: true,
-        responsive: [{
-                breakpoint: 1025,
-                settings: {
-                    arrows: false,
-                    centerMode: true,
-                    centerPadding: '40px',
-                    slidesToShow: 2,
-                    slidesToScroll: 2,
-                    mobileFirst: true,
-                }
-            },
-            {
-
-                breakpoint: 1024,
-                settings: {
-                    arrows: false,
-                    centerMode: true,
-                    centerPadding: '40px',
-                    slidesToShow: 1,
-                    slidesToScroll: 2,
-                    mobileFirst: true,
-                }
-
-
-            }
-        ]
+        });
 
 
     });
-
-});
